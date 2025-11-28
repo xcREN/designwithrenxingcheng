@@ -1,0 +1,14 @@
+# 必须排除的大体积文件夹和编译文件
+/node_modules
+/.next/
+/out/
+/dist/
+
+# 其它常用排除项
+.env
+.env.local
+npm-debug.log
+yarn-error.log
+
+# 如果您上传了压缩包，也需要排除
+*.zip
