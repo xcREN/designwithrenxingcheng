@@ -41,7 +41,7 @@ export function ScrollingFooter() {
           {tags.map((tag, index) => (
             <span key={`tag-1-${index}`} className="text-xs text-zinc-600 font-medium tracking-wider">
               {tag}
-              {index < tags.length - 1 && <span className="mx-4">·</span>}
+              <span className="mx-4">·</span>
             </span>
           ))}
 
@@ -49,7 +49,7 @@ export function ScrollingFooter() {
           {tags.map((tag, index) => (
             <span key={`tag-2-${index}`} className="text-xs text-zinc-600 font-medium tracking-wider">
               {tag}
-              {index < tags.length - 1 && <span className="mx-4">·</span>}
+              <span className="mx-4">·</span>
             </span>
           ))}
         </div>
