@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -9,10 +9,18 @@ type Tab = "story" | "services" | "chinese"
 interface AboutModalProps {
   isOpen: boolean
   onClose: () => void
+  /** Optional: when opened, show this tab */
+  initialTab?: Tab
 }
 
-export function AboutModal({ isOpen, onClose }: AboutModalProps) {
+export function AboutModal({ isOpen, onClose, initialTab }: AboutModalProps) {
   const [activeTab, setActiveTab] = useState<Tab>("story")
+
+  useEffect(() => {
+    if (isOpen && typeof initialTab !== "undefined") {
+      setActiveTab(initialTab)
+    }
+  }, [isOpen, initialTab])
 
   if (!isOpen) return null
 

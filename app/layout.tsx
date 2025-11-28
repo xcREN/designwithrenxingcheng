@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { ScrollingFooter } from "@/components/scrolling-footer"
 import SpotlightBg from "@/components/spotlight-bg"
+import AboutModalController from "@/components/about-modal-controller"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -41,6 +42,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans antialiased dark`}>
         <SpotlightBg />
+        <AboutModalController />
         <div className="relative z-10">
           {children}
           <ScrollingFooter />

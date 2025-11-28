@@ -45,12 +45,16 @@ export function AboutProfile() {
         >
           A bit more about me
         </button>
-        <Link
-          href="/shop"
+        <button
+          onClick={() => {
+            const ev = new CustomEvent("open-about-modal", { detail: { tab: "services" } })
+            window.dispatchEvent(ev)
+          }}
           className="block w-full bg-gray-800 text-white py-3 rounded-full font-semibold hover:bg-gray-700 transition"
+          aria-label="Open About Services"
         >
           Work with me
-        </Link>
+        </button>
       </div>
 
       <div className="flex justify-center gap-6">
