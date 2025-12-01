@@ -55,7 +55,7 @@ export default function SpotlightBg() {
     }, [])
 
     return (
-        <div ref={rootRef} className="fixed inset-0 pointer-events-none z-0">
+        <div ref={rootRef} className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
             <div className="hero-bg-lines absolute inset-0" />
             <div className="hero-spotlight absolute inset-0" />
         </div>

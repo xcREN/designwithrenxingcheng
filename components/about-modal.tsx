@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from "react"
 import { X } from "lucide-react"
@@ -117,12 +117,10 @@ export function AboutModal({ isOpen, onClose, initialTab }: AboutModalProps) {
             <div className="space-y-4 text-gray-300 text-sm">
               <p>8+ 年 UXUI 设计经验；最近 3 年沉浸用 AI 工具。专精于 UXUI 用户体验设计、AI 辅助设计及自动化。</p>
               <p>
-                上班主要做产品云平台、设备软件、商业网站 & 手机 APP
-                等框架设计，也有利用下班后的时间创造资用的设计工具跟贩售设计模板、图库等。专注创造设计师专用的被动收入。
+                上班主要做产品云平台、设备软件、商业网站 & 手机 APP 等框架设计，也有利用下班后的时间创造资用的设计工具跟贩售设计模板、图库等。专注创造设计师专用的被动收入。
               </p>
               <p>
-                目前主要在个人站分享设计 x AI 知识，分享经验被动收入的心得，并提供专业网页设计、作品集建议、UXUI 资源
-                & 产品等。
+                目前主要在个人站分享设计 x AI 知识，分享经验被动收入的心得，并提供专业网页设计、作品集建议、UXUI 资源 & 产品等。
               </p>
             </div>
           )}
@@ -131,3 +129,4 @@ export function AboutModal({ isOpen, onClose, initialTab }: AboutModalProps) {
     </div>
   )
 }
+

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "Design with Renxingcheng",
   description: "UXUI Design, AI Tools & Consulting Services",
   generator: "v0.app",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   icons: {
     icon: [
       {
