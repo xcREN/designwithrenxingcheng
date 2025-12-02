@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function WritingsPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen">
       <Navigation />
       <section className="pt-32 pb-20 px-4">
         <div className="max-w-6xl mx-auto">

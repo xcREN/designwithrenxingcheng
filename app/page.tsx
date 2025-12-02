@@ -3,7 +3,9 @@ import { Hero } from "@/components/hero"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background pb-20">
+    // <main className="min-h-screen bg-background pb-20">
+    // 
+    <main className="min-h-screen pb-20">
       <Navigation />
       <Hero />
     </main>

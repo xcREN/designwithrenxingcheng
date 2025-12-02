@@ -23,24 +23,24 @@ export function Hero() {
           </div>
         </div>
 
-        <p className="text-xs sm:text-sm font-mono tracking-widest text-gray-400 mb-4 sm:mb-6 px-2">
+        <p className="text-[10px] md:text-xs font-bold tracking-[0.3em] text-white mb-4 md:mb-6 px-2 uppercase">
           DESIGN AND AI TIPS & UXUI DESIGN SERVICES
         </p>
 
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-6 sm:mb-8 leading-tight px-2">
-          Design with <span className="italic">Renxingcheng</span>
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white mb-8 md:mb-12 leading-none px-2">
+          Design with <span className="italic font-light">Renxingcheng</span>
         </h1>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 sm:px-0">
           <Link
             href="/writings"
-            className="px-6 sm:px-8 py-2 sm:py-3 bg-white text-black font-medium text-sm sm:text-base rounded-full hover:bg-gray-100 transition"
+            className="px-6 py-3 md:px-8 md:py-3.5 bg-white text-black font-medium text-sm md:text-base rounded-full hover:bg-gray-100 transition-all hover:px-10 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
           >
             View articles
           </Link>
           <button
             onClick={() => setShowAbout(true)}
-            className="px-6 sm:px-8 py-2 sm:py-3 border border-gray-600 text-white font-medium text-sm sm:text-base rounded-full hover:bg-white/10 transition"
+            className="px-6 py-3 md:px-8 md:py-3.5 border border-white/30 text-white font-medium text-sm md:text-base rounded-full hover:bg-white/10 transition-colors backdrop-blur-sm"
           >
             About Renxingcheng
           </button>

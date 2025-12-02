@@ -134,7 +134,7 @@ html {
 
   /* Force dark page background so global spotlight/lines are visible */
   body {
-    background-color: #070707 !important;
+    /* background-color: #070707 !important; */
     overflow-x: hidden;
     width: 100%;
     height: 100%;
@@ -146,28 +146,39 @@ html {
   display: none !important;
 }
 
-/* Hero background: subtle vertical lines */
+/* Hero background: subtle vertical lines matching competitor */
 .hero-bg-lines {
-  background-color: #070707;
-  /* dark base */
-  /* stronger visible vertical lines */
+  background-color: #0a0a0a;
+  /* dark base - match competitor */
+  /* subtle vertical lines */
   background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 12px);
-  background-size: auto;
+
+  /* 【关键修复点】明确设置背景图案重复单元的尺寸为 12px 宽，而非 auto */
+  background-size: 12px auto !important;
+  /* 确保背景平铺 */
+  background-repeat: repeat !important;
+
+  /* 诊断性添加：确保元素本身是满屏的 */
+  width: 100vw !important;
+  height: 100vh !important;
+
   opacity: 1;
   z-index: 0;
 }
 
-/* Spotlight that follows mouse using CSS vars set by JS (--spot-x, --spot-y, --spot-size, --spot-opacity) */
+/* Spotlight that follows mouse - Activated */
 .hero-spotlight {
-  --spot-size: 520px;
-  pointer-events: none;
-  /* warmer, more visible highlight */
-  background: radial-gradient(circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(255, 200, 160, 0.22) 0 calc(var(--spot-size) * 0.1), rgba(255, 160, 120, 0.12) calc(var(--spot-size) * 0.3), rgba(255, 140, 100, 0.06) calc(var(--spot-size) * 0.6), transparent calc(var(--spot-size)));
-  /* use screen blend to ensure highlight shows on dark backgrounds */
-  mix-blend-mode: screen;
+  /* 1. 移除 display: none; */
+
+  /* 2. 添加光晕效果：使用 JS 设置的 --spot-x/y/opacity 变量 */
+  background: radial-gradient(circle at var(--spot-x, 50%) var(--spot-y, 50%),
+      /* 颜色和透明度：您可以调整这里的 0.15 让光晕更亮或更暗 */
+      rgba(138, 138, 138, 0.15),
+      transparent 30%);
+
+  /* 3. 使用 JS 设置的透明度变量，并添加过渡效果 */
   opacity: var(--spot-opacity, 0);
-  transition: opacity 140ms linear, transform 140ms ease;
-  z-index: 1;
+  transition: opacity 0.5s ease;
 }
 
 /* Slight overall background texture under hero to make it non-pure-black */
