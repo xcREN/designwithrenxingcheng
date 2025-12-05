@@ -1,5 +1,7 @@
 "use client"
 
+import Markdown from 'react-markdown'
+
 interface WritingDetailModalProps {
   writing: {
     id: number
@@ -13,6 +15,15 @@ interface WritingDetailModalProps {
 }
 
 export function WritingDetailModal({ writing, onClose }: WritingDetailModalProps) {
+  // 将fullContent处理成数组，按段落分割
+  const formatContent = (content: string) => {
+    if (!content) return []
+    // 按换行符分割内容
+    return content.split('\n').filter(line => line.trim() !== '')
+  }
+
+  const contentSections = writing.fullContent ? formatContent(writing.fullContent) : []
+
   return (
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
       <div
@@ -37,7 +48,18 @@ export function WritingDetailModal({ writing, onClose }: WritingDetailModalProps
         <div className="prose prose-invert max-w-none">
           {writing.fullContent && (
             <div className="text-gray-300 leading-relaxed space-y-4">
-              <p>{writing.fullContent}</p>
+              {contentSections.map((section, index) => (
+                <Markdown 
+                  key={index} 
+                  components={{
+                    strong: ({node, ...props}) => <span className="font-bold text-white" {...props} />,
+                    ul: ({node, ...props}) => <ul className="list-disc pl-5 space-y-1" {...props} />,
+                    li: ({node, ...props}) => <li className="pl-2" {...props} />
+                  }}
+                >
+                  {section.trim()}
+                </Markdown>
+              ))}
             </div>
           )}
         </div>
