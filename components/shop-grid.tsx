@@ -67,7 +67,7 @@ const products = [
     category: "ANIMATION",
     tag: "VIDEO",
     cta: "观看演示",
-    videos: ["/smartsolo爆破振动云平台.mp4"]
+    videos: ["/smartsolo1.1.mp4"]
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ const products = [
     category: "ANIMATION",
     tag: "VIDEO",
     cta: "观看演示",
-    videos: ["/地震监测云平台v1.0（英文版快速指南）.mp4", "/地震监测云平台v1.0（中文版PPT）.mp4"]
+    videos: ["/smartsolo2.1.mp4", "/smartsolo2.2.mp4"]
   },
 ]
 
